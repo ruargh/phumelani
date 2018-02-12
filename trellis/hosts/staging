@@ -2,7 +2,7 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [staging]
-your_server_hostname
+ec2-18-217-94-94.us-east-2.compute.amazonaws.com
 
 [web]
-your_server_hostname
+staging.phumelani.co.za
