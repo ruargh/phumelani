@@ -1,0 +1,20 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/staging/vault.yml
+
+wordpress_sites:
+  phumelani.co.za:
+    site_hosts:
+      - canonical: staging.phumelani.co.za
+        #redirects:
+        #  - www.phumelani.test
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: ruargh@gmail.com
+    repo: git@github.com:ruargh/phumelani.git # replace with your Git repo URL
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false
